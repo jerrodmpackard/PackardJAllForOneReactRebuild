@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { askingQuestionsCall } from '../../services/DataService';
+import "./AskingQuestionsComponent.css";
+
 
 
 export default function AskingQuestionsComponent() {
@@ -19,7 +21,7 @@ export default function AskingQuestionsComponent() {
 
     return (
         <div>
-            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3'>Back to Main Menu</Button>{' '}
+            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3 fs-5'>Back to Main Menu</Button>{' '}
 
             <h1 className='d-flex justify-content-center pt-5'>Asking Questions</h1>
             <p className='d-flex justify-content-center pt-5'>Enter your name and the time you woke up below</p>
@@ -32,7 +34,7 @@ export default function AskingQuestionsComponent() {
             <Form.Label htmlFor="wakeUpTime">Wake Up time</Form.Label>
             <Form.Control onChange={(e) => setWakeUpTime(e.target.value)} id='wakeUpTime' type="text" />
 
-            <Button onClick={() => getResult()} variant="primary">Submit</Button>{' '}
+            <Button onClick={() => getResult()} variant="primary" className='fs-5'>Submit</Button>{' '}
         </div>
     )
 }

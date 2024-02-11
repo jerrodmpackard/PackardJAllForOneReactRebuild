@@ -3,6 +3,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { reverseWordsCall } from '../../services/DataService';
+import "./ReverseWordsComponent.css";
+
 
 export default function ReverseWordsComponent() {
 
@@ -16,7 +18,7 @@ export default function ReverseWordsComponent() {
 
     return (
         <div>
-            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3'>Back to Main Menu</Button>{' '}
+            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3 fs-5'>Back to Main Menu</Button>{' '}
 
             <h1 className='d-flex justify-content-center pt-5'>Reverse Words</h1>
             <p className='d-flex justify-content-center pt-5'>Enter something below to see it reversed</p>
@@ -26,7 +28,7 @@ export default function ReverseWordsComponent() {
             <Form.Label htmlFor="something">Something</Form.Label>
             <Form.Control onChange={(e) => setSomething(e.target.value)} id='something' type="text" />
 
-            <Button onClick={() => getResult()} variant="primary">Submit</Button>{' '}
+            <Button onClick={() => getResult()} variant="primary" className='fs-5'>Submit</Button>{' '}
         </div>
     )
 }

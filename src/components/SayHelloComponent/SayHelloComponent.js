@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { sayHelloCall } from '../../services/DataService';
+import "./SayHelloComponent.css";
 
 
 export default function SayHelloComponent() {
@@ -18,7 +19,7 @@ export default function SayHelloComponent() {
 
     return (
         <div>
-            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3'>Back to Main Menu</Button>{' '}
+            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3 fs-5'>Back to Main Menu</Button>{' '}
 
             <h1 className='d-flex justify-content-center pt-5'>Say Hello</h1>
             <p className='d-flex justify-content-center pt-5'>Enter your name below</p>
@@ -28,7 +29,7 @@ export default function SayHelloComponent() {
             <div className='d-inline-flex flex-col justify-content-center pt-5'>
                 <Form.Label htmlFor="name">Name</Form.Label>
                 <Form.Control onChange={(e) => setUserName(e.target.value)} id='name'  type="text" />
-                <Button onClick={() => getResult()} variant="primary">Submit</Button>{' '}
+                <Button onClick={() => getResult()} variant="primary" className='fs-5'>Submit</Button>{' '}
             </div>
         </div>
     )

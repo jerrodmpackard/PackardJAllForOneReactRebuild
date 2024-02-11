@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { sumTwoNumbersCall } from '../../services/DataService';
+import "./SumTwoNumbersComponent.css";
+
 
 export default function SumTwoNumbersComponent() {
 
@@ -18,7 +20,7 @@ export default function SumTwoNumbersComponent() {
 
     return (
         <div>
-            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3'>Back to Main Menu</Button>{' '}
+            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3 fs-5'>Back to Main Menu</Button>{' '}
 
             <h1 className='d-flex justify-content-center pt-5'>Sum Two Numbers</h1>
             <p className='d-flex justify-content-center pt-5'>Enter two numbers below to be summed</p>
@@ -31,7 +33,7 @@ export default function SumTwoNumbersComponent() {
             <Form.Label htmlFor="number2">Number 2</Form.Label>
             <Form.Control onChange={(e) => setNumber2(e.target.value)} id='number2' type="text" />
 
-            <Button onClick={() => getResult()} variant="primary">Submit</Button>{' '}
+            <Button onClick={() => getResult()} variant="primary" className='fs-5'>Submit</Button>{' '}
         </div>
     )
 }

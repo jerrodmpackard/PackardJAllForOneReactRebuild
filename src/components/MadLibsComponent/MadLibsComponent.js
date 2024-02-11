@@ -3,6 +3,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { madLibsCall } from '../../services/DataService'
+import "./MadLibsComponent.css";
+
 
 export default function MadLibsComponent() {
 
@@ -26,7 +28,7 @@ export default function MadLibsComponent() {
 
     return (
         <div>
-            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3'>Back to Main Menu</Button>{' '}
+            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3 fs-5'>Back to Main Menu</Button>{' '}
 
             <h1 className='d-flex justify-content-center pt-5'>Mad Libs</h1>
             <p className='d-flex justify-content-center pt-5'>Follow the prompts below to create a Mad Lib</p>
@@ -63,7 +65,7 @@ export default function MadLibsComponent() {
             <Form.Label htmlFor="adj1">Adjective</Form.Label>
             <Form.Control onChange={(e) => setAdj2(e.target.value)} id='adj1' type="text" />
 
-            <Button onClick={() => getResult()} variant="primary">Submit</Button>{' '}
+            <Button onClick={() => getResult()} variant="primary" className='fs-5'>Submit</Button>{' '}
         </div>
     )
 }

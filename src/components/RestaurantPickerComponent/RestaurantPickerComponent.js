@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import { fastFoodCall, pizzaCall, restaurantCall } from '../../services/DataService';
+import "./RestaurantPickerComponent.css";
+
 
 export default function RestaurantPickerComponent() {
 
@@ -24,16 +26,16 @@ export default function RestaurantPickerComponent() {
 
     return (
         <div>
-            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3'>Back to Main Menu</Button>{' '}
+            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3 fs-5'>Back to Main Menu</Button>{' '}
 
             <h1 className='d-flex justify-content-center pt-5'>Restaurant Picker</h1>
             <p className='d-flex justify-content-center pt-5'>Select an option below to randomly generate a restaurant</p>
 
             <p className='d-flex justify-content-center pt-5'>{result}</p>
 
-            <Button onClick={() => getFastFoodResult()} variant="primary">Fast Food</Button>{' '}
-            <Button onClick={() => getPizzaResult()} variant="primary">Pizza</Button>{' '}
-            <Button onClick={() => getRestaurantResult()} variant="primary">Restaurant</Button>{' '}
+            <Button onClick={() => getFastFoodResult()} variant="primary" className='fs-5'>Fast Food</Button>{' '}
+            <Button onClick={() => getPizzaResult()} variant="primary" className='fs-5'>Pizza</Button>{' '}
+            <Button onClick={() => getRestaurantResult()} variant="primary" className='fs-5'>Restaurant</Button>{' '}
         </div>
     )
 }

@@ -1,0 +1,25 @@
+@media (min-width: 320px) {
+    h1 {
+        font-size: calc(3.75rem + ((1vw - 3.2px) * 3.2143));
+        min-height: 0vw;
+    }
+}
+
+@media (min-width: 1440px) {
+    h1 {
+        font-size: 96px;
+    }
+}
+
+@media (min-width: 320px) {
+    h3 {
+        font-size: calc(1.875rem + ((1vw - 3.2px) * 2.6786));
+        min-height: 0vw;
+    }
+}
+
+@media (min-width: 1440px) {
+    h3 {
+        font-size: 60px;
+    }
+}

@@ -3,6 +3,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { magic8BallCall } from '../../services/DataService';
+import "./Magic8BallComponent.css";
+
 
 export default function Magic8BallComponent() {
 
@@ -16,7 +18,7 @@ export default function Magic8BallComponent() {
 
     return (
         <div>
-            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3'>Back to Main Menu</Button>{' '}
+            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3 fs-5'>Back to Main Menu</Button>{' '}
 
             <h1 className='d-flex justify-content-center pt-5'>Magic 8 Ball</h1>
             <p className='d-flex justify-content-center pt-5'>Ask the Magic 8 Ball a question to receive a response</p>
@@ -26,7 +28,7 @@ export default function Magic8BallComponent() {
             <Form.Label htmlFor="question">Question</Form.Label>
             <Form.Control onChange={(e) => setQuestion(e.target.value)} id='question' type="text" />
 
-            <Button onClick={() => getResult()} variant="primary">Submit</Button>{' '}
+            <Button onClick={() => getResult()} variant="primary" className='fs-5'>Submit</Button>{' '}
         </div>
     )
 }
