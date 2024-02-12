@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import { madLibsCall } from '../../services/DataService'
 import "./MadLibsComponent.css";
@@ -28,44 +30,74 @@ export default function MadLibsComponent() {
 
     return (
         <div>
-            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3 fs-5'>Back to Main Menu</Button>{' '}
+            <Button as={Link} to={'/'} variant="primary" className='mainMenuMargin fs-5'>Back to Main Menu</Button>{' '}
 
             <h1 className='d-flex justify-content-center pt-5'>Mad Libs</h1>
-            <p className='d-flex justify-content-center pt-5'>Follow the prompts below to create a Mad Lib</p>
+            <p className='d-flex justify-content-center text-center pt-5'>Follow the prompts below to create a Mad Lib</p>
 
             <p className='d-flex justify-content-center pt-5'>{result}</p>
 
-            <Form.Label htmlFor="heroName">Hero Name</Form.Label>
-            <Form.Control onChange={(e) => setHeroName(e.target.value)} id='heroname' type="text" />
+            <div className='container px-3 mx-5 d-flex flex-column justify-content-center mx-auto gap-3'>
+                <Row>
+                    <Col sm>
+                    <Form.Label className='fs-5' htmlFor="heroName">Hero Name</Form.Label>
+                    <Form.Control onChange={(e) => setHeroName(e.target.value)} id='heroname' className='' size='lg' type="text" />
+                    </Col>
 
-            <Form.Label htmlFor="planetName">Planet Name</Form.Label>
-            <Form.Control onChange={(e) => setPlanetName(e.target.value)} id='planetName' type="text" />
-            
-            <Form.Label htmlFor="speciesName">Species name</Form.Label>
-            <Form.Control onChange={(e) => setSpeciesName(e.target.value)} id='speciesName' type="text" />
+                    <Col sm>
+                    <Form.Label className='fs-5' htmlFor="planetName">Planet Name</Form.Label>
+                    <Form.Control onChange={(e) => setPlanetName(e.target.value)} id='planetName' className='' size='lg' type="text" />
+                    </Col>
 
-            <Form.Label htmlFor="pluralNoun">Plural Noun</Form.Label>
-            <Form.Control onChange={(e) => setPluralNoun(e.target.value)} id='pluralNoun' type="text" />
-            
-            <Form.Label htmlFor="singularNoun1">Singular Noun</Form.Label>
-            <Form.Control onChange={(e) => setSingularNoun1(e.target.value)} id='singularNoun1' type="text" />
+                    <Col sm>
+                    <Form.Label className='fs-5' htmlFor="speciesName">Species name</Form.Label>
+                    <Form.Control onChange={(e) => setSpeciesName(e.target.value)} id='speciesName' className='' size='lg' type="text" />
+                    </Col>
 
-            <Form.Label htmlFor="singularNoun2">Singular Noun</Form.Label>
-            <Form.Control onChange={(e) => setSingularNoun2(e.target.value)} id='singularNoun2' type="text" />
-            
-            <Form.Label htmlFor="verb1">Verb</Form.Label>
-            <Form.Control onChange={(e) => setVerb1(e.target.value)} id='verb1' type="text" />
+                    <Col sm>
+                    <Form.Label className='fs-5' htmlFor="pluralNoun">Plural Noun</Form.Label>
+                    <Form.Control onChange={(e) => setPluralNoun(e.target.value)} id='pluralNoun' className='' size='lg' type="text" />
+                    </Col>
 
-            <Form.Label htmlFor="verb2">Verb</Form.Label>
-            <Form.Control onChange={(e) => setVerb2(e.target.value)} id='verb2' type="text" />
-            
-            <Form.Label htmlFor="adj1">Adjective</Form.Label>
-            <Form.Control onChange={(e) => setAdj1(e.target.value)} id='adj1' type="text" />
+                    <Col sm>
+                    <Form.Label className='fs-5' htmlFor="singularNoun1">Singular Noun</Form.Label>
+                    <Form.Control onChange={(e) => setSingularNoun1(e.target.value)} id='singularNoun1' className='' size='lg' type="text" />
+                    </Col>
+                </Row>
+                
+                <Row>
+                    <Col sm>
+                    <Form.Label className='fs-5' htmlFor="singularNoun2">Singular Noun</Form.Label>
+                    <Form.Control onChange={(e) => setSingularNoun2(e.target.value)} id='singularNoun2' className='' size='lg' type="text" />
+                    </Col>
 
-            <Form.Label htmlFor="adj1">Adjective</Form.Label>
-            <Form.Control onChange={(e) => setAdj2(e.target.value)} id='adj1' type="text" />
+                    <Col sm>
+                    <Form.Label className='fs-5' htmlFor="verb1">Verb</Form.Label>
+                    <Form.Control onChange={(e) => setVerb1(e.target.value)} id='verb1' className='' size='lg' type="text" />
+                    </Col>
 
-            <Button onClick={() => getResult()} variant="primary" className='fs-5'>Submit</Button>{' '}
+                    <Col sm>
+                    <Form.Label className='fs-5' htmlFor="verb2">Verb</Form.Label>
+                    <Form.Control onChange={(e) => setVerb2(e.target.value)} id='verb2' className='' size='lg' type="text" />
+                    </Col>
+
+                    <Col sm>
+                    <Form.Label className='fs-5' htmlFor="adj1">Adjective</Form.Label>
+                    <Form.Control onChange={(e) => setAdj1(e.target.value)} id='adj1' className='' size='lg' type="text" />
+                    </Col>
+
+                    <Col sm>
+                    <Form.Label className='fs-5' htmlFor="adj1">Adjective</Form.Label>
+                    <Form.Control onChange={(e) => setAdj2(e.target.value)} id='adj1' className='' size='lg' type="text" />
+                    </Col>
+                </Row>
+
+
+
+
+                <Button onClick={() => getResult()} variant="primary" className='fs-5 mt-auto mx-auto submitSize px-3'>Submit</Button>{' '}
+            </div>
+
         </div>
     )
 }

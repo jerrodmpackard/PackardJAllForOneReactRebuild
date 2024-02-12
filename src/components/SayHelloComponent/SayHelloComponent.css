@@ -23,3 +23,20 @@
         font-size: 36px;
     }
 }
+
+.mainMenuMargin {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 210px;
+    height: 48px;
+}
+
+.inputSize {
+    width: 256px;
+    height: 50px;
+}
+
+.submitSize {
+    width: 104px;
+    height: 50px;
+}

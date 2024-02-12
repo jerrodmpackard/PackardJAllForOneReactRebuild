@@ -16,7 +16,7 @@ import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 
 function App() {
   return (
-    <div style={{ backgroundImage: "url(/6221972.jpg)", backgroundSize: "cover", backgroundAttachment: "fixed", height: "100vh", width: "100%" }}>
+    <div style={{ backgroundImage: "url(/6221972.jpg)", backgroundSize: "cover", backgroundAttachment: "fixed", height: "100vh", width: "100%", overflow: "scroll" }}>
 
       <BrowserRouter >
 

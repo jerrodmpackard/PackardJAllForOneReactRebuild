@@ -10,7 +10,7 @@ export default function HomePageComponent() {
     return (
         <div className='' >
             <h1 className='d-flex justify-content-center pt-5'>All For One</h1>
-            <h3 className='d-flex justify-content-center pt-5'>Select an option below to continue</h3>
+            <h3 className='d-flex justify-content-center text-center pt-5'>Select an option below to continue</h3>
 
             <div className='container pt-5'>
                 <Row>

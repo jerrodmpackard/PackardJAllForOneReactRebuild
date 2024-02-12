@@ -18,17 +18,22 @@ export default function OddOrEvenComponent() {
 
     return (
         <div>
-            <Button as={Link} to={'/'} variant="primary" className='ms-3 mt-3 fs-5'>Back to Main Menu</Button>{' '}
+            <Button as={Link} to={'/'} variant="primary" className='mainMenuMargin fs-5'>Back to Main Menu</Button>{' '}
 
             <h1 className='d-flex justify-content-center pt-5'>Odd or Even</h1>
-            <p className='d-flex justify-content-center pt-5'>Enter a number below to see if it is odd or even</p>
+            <p className='d-flex justify-content-center text-center pt-5'>Enter a number below to see if it is odd or even</p>
 
             <p className='d-flex justify-content-center pt-5'>{result}</p>
 
-            <Form.Label htmlFor="number1">Number</Form.Label>
-            <Form.Control onChange={(e) => setNumber1(e.target.value)} id='number1' type="text" />
+            <div className='container px-5 mx-5 d-flex flex-column justify-content-center mx-auto gap-3 flex-sm-row'>
+                <div className='d-flex flex-column mx-auto mx-sm-0 justify-content-center'>
+                    <Form.Label className='fs-5' htmlFor="number1">Number</Form.Label>
+                    <Form.Control onChange={(e) => setNumber1(e.target.value)} id='number1' className='inputSize' size='lg' type="text" />
+                </div>
 
-            <Button onClick={() => getResult()} variant="primary" className='fs-5'>Submit</Button>{' '}
+                <Button onClick={() => getResult()} variant="primary" className='fs-5 mt-auto mx-auto mx-sm-0 submitSize px-3'>Submit</Button>{' '}
+            </div>
+
         </div>
     )
 }
