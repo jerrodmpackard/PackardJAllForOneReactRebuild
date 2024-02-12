@@ -26,7 +26,7 @@ export default function AskingQuestionsComponent() {
             <h1 className='d-flex justify-content-center text-center pt-5'>Asking Questions</h1>
             <p className='d-flex justify-content-center text-center pt-5'>Enter your name and the time you woke up below</p>
 
-            <p className='d-flex justify-content-center pt-5'>{result}</p>
+            <p className='d-flex justify-content-center text-center py-5'>{result}</p>
 
             <div className='container px-5 mx-5 d-flex flex-column justify-content-center mx-auto gap-3 flex-sm-row'>
                 <div className='d-flex flex-column mx-auto mx-sm-0 justify-content-center'>

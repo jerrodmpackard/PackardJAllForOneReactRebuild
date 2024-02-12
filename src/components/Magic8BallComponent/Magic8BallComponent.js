@@ -23,7 +23,7 @@ export default function Magic8BallComponent() {
             <h1 className='d-flex justify-content-center pt-5'>Magic 8 Ball</h1>
             <p className='d-flex justify-content-center text-center pt-5'>Ask the Magic 8 Ball a question to receive a response</p>
 
-            <p className='d-flex justify-content-center pt-5'>{result}</p>
+            <p className='d-flex justify-content-center text-center py-5'>{result}</p>
 
             <div className='container px-5 mx-5 d-flex flex-column justify-content-center mx-auto gap-3 flex-sm-row'>
                 <div className='d-flex flex-column mx-auto mx-sm-0 justify-content-center'>

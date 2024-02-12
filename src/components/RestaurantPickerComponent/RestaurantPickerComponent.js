@@ -31,7 +31,7 @@ export default function RestaurantPickerComponent() {
             <h1 className='d-flex justify-content-center text-center pt-5'>Restaurant Picker</h1>
             <p className='d-flex justify-content-center text-center pt-5'>Select an option below to randomly generate a restaurant</p>
 
-            <p className='d-flex justify-content-center pt-5'>{result}</p>
+            <p className='d-flex justify-content-center text-center py-5'>{result}</p>
 
             <div className='container px-5 mx-5 d-flex flex-column justify-content-center mx-auto gap-3 flex-sm-row'>
             <Button onClick={() => getFastFoodResult()} variant="primary" className='fs-5 w-100'>Fast Food</Button>{' '}

@@ -35,7 +35,7 @@ export default function MadLibsComponent() {
             <h1 className='d-flex justify-content-center pt-5'>Mad Libs</h1>
             <p className='d-flex justify-content-center text-center pt-5'>Follow the prompts below to create a Mad Lib</p>
 
-            <p className='d-flex justify-content-center pt-5'>{result}</p>
+            <p className='d-flex justify-content-center text-center py-5'>{result}</p>
 
             <div className='container px-3 mx-5 d-flex flex-column justify-content-center mx-auto gap-3'>
                 <Row>

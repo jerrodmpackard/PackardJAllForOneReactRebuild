@@ -13,7 +13,7 @@ export default function HomePageComponent() {
             <h3 className='d-flex justify-content-center text-center pt-5'>Select an option below to continue</h3>
 
             <div className='container pt-5'>
-                <Row>
+                <Row className='gap-3'>
                     <Col sm>
                     <Button as={Link} to={'SayHello'} variant="primary" className='fs-5 w-100'>Say Hello</Button>{' '}
                     </Col>
@@ -34,7 +34,7 @@ export default function HomePageComponent() {
                     <Button as={Link} to={'MadLibs'} variant="primary" className='fs-5 w-100'>Mad Libs</Button>{' '}
                     </Col>
                 </Row>
-                <Row>
+                <Row className='gap-3 pt-3'>
                     <Col sm>
                     <Button as={Link} to={'OddOrEven'} variant="primary" className='fs-5 w-100'>Odd or Even</Button>{' '}
                     </Col>
